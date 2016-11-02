@@ -1,0 +1,12 @@
+set pastetoggle=<F10>
+let g:ycm_key_invoke_completion = '<C-b>'
+
+" Load on nothing
+Plug 'SirVer/ultisnips', { 'on': [] }
+Plug 'Valloric/YouCompleteMe', { 'on': [] }
+
+augroup load_us_ycm
+  autocmd!
+  autocmd InsertEnter * call plug#load('ultisnips', 'YouCompleteMe')
+                     \| autocmd! load_us_ycm
+augroup END
