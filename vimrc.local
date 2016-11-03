@@ -18,3 +18,5 @@ noremap <Leader>gcsmg :Gcommit<CR>
 noremap <Leader>gp :Gpush<CR>
 noremap <Leader>gl :Gpull<CR>
 noremap <Leader>gst :Gstatus<CR>
+noremap <Leader>gco :Git checkout<Space>
+noremap <Leader>ga :Git add %:p<CR><CR>
