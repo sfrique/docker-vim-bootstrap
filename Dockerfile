@@ -24,6 +24,7 @@ RUN apk add --no-cache \
     ncurses
 
 COPY vimrc.local ${HOME}/.vimrc.local
+COPY vimrc.local.bundles ${HOME}/.vimrc.local.bundles
 
 RUN apk add --no-cache --virtual build-deps \
 	abuild \
@@ -47,7 +48,8 @@ RUN apk add --no-cache --virtual build-deps \
 	./vim-bootstrap -langs=${VIM_BOOTSTRAP_LANGS} -editor=${EDITOR} > ${HOME}/.vimrc && \
     # curl 'http://vim-bootstrap.com/generate.vim' --data '${VIM_BOOTSTRAP_CURL_LANGS}&editor=${EDITOR}' > ${HOME}/.vimrc && \
 	vim -E -s -c "source ~/.vimrc" -c "+PluginInstall +qall" || \
-	${HOME}/.vim/plugged/YouCompleteMe/install.py && \
 	apk del build-deps
+
+WORKDIR /projects/
 
 ENTRYPOINT ["vim"]

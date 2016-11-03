@@ -1,0 +1,2 @@
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'Xuyuanp/nerdtree-git-plugin'

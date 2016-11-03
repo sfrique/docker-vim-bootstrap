@@ -1,8 +1,6 @@
 set pastetoggle=<F10>
 
-" Load on nothing
-Plug 'SirVer/ultisnips', { 'on': [] }
-Plug 'Valloric/YouCompleteMe', { 'on': [] }
+set updatetime=250
 
 augroup load_us_ycm
   autocmd!
