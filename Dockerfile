@@ -16,6 +16,7 @@ RUN apk add --no-cache \
 	ctags \
 	curl \
 	git \
+	go \
 	libstdc++ \
 	py-pip \
 	python3 \
@@ -31,7 +32,6 @@ RUN apk add --no-cache --virtual build-deps \
 	build-base \
 	cmake \
 	gcc \
-	go \
 	llvm \
 	musl-dev \
 	perl \
@@ -48,7 +48,6 @@ RUN apk add --no-cache --virtual build-deps \
     # curl 'http://vim-bootstrap.com/generate.vim' --data '${VIM_BOOTSTRAP_CURL_LANGS}&editor=${EDITOR}' > ${HOME}/.vimrc && \
 	vim -E -s -c "source ~/.vimrc" -c "+PluginInstall +qall" || \
 	${HOME}/.vim/plugged/YouCompleteMe/install.py && \
-	rm -rf $GOPATH && \
 	apk del build-deps
 
 ENTRYPOINT ["vim"]
