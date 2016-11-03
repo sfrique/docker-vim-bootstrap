@@ -17,6 +17,7 @@ RUN apk add --no-cache \
 	curl \
 	git \
 	go \
+	grep \
 	libstdc++ \
 	py-pip \
 	python3 \
