@@ -1,6 +1,6 @@
 set pastetoggle=<F10>
 
-set updatetime=250
+set updatetime=500
 
 augroup load_us_ycm
   autocmd!
@@ -12,3 +12,9 @@ augroup END
 let g:UltiSnipsExpandTrigger = '<C-j>'
 let g:UltiSnipsJumpForwardTrigger = '<C-j>'
 let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
+
+"" Git
+noremap <Leader>gcsmg :Gcommit<CR>
+noremap <Leader>gp :Gpush<CR>
+noremap <Leader>gl :Gpull<CR>
+noremap <Leader>gst :Gstatus<CR>
